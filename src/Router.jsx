@@ -4,10 +4,12 @@ import Main from "./pages/Main";
 import MyInfo from "./pages/MyInfo";
 import SignIn from "./pages/Auth/SignIn";
 import SignUp from "./pages/Auth/SignUp";
+import Header from "./components/Header";
 
 const Router = () => {
   return (
     <BrowserRouter>
+      <Header></Header>
       <Routes>
         <Route path="/" element={<Main />}></Route>
         <Route path="/myinfo" element={<MyInfo />}></Route>

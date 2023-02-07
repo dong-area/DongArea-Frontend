@@ -6,7 +6,6 @@ import * as S from "../style/MainStyle";
 const Main = () => {
   return (
     <>
-      <Header></Header>
       <S.MainImg>
         <S.MainImgLeftArea>
           <S.LeftArea>

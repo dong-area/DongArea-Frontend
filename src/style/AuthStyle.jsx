@@ -23,10 +23,10 @@ export const EntireBox = styled.nav`
 
 export const CenterBox = styled.nav`
   font-weight: bold;
-  width: 32.375rem;
-  height: 42.75rem;
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
   background-color: #fff;
-  margin: -2rem auto;
+  margin: ${(props) => props.margin};
   border-radius: 1.25rem;
   padding: 2rem;
   font-family: "Roboto";
@@ -54,7 +54,7 @@ export const InputTag = styled.input`
   font-size: 1rem;
   margin: 2rem 0rem 0rem 1rem;
   padding: 1rem;
-  width: 24rem;
+  width: 18rem;
 `;
 
 export const SubmitButton = styled.button`
