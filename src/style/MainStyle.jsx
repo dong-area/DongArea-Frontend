@@ -46,7 +46,7 @@ export const ClubSpanText = styled.span`
 export const BottomForm = styled.nav`
   background-color: #1f1f1f;
   width: 100%;
-  height: 50%;
+  height: 50.7%;
   font-weight: 700;
 `;
 
@@ -78,4 +78,10 @@ export const BottomBtn = styled.button`
 
 export const BottomBtnNav = styled.nav`
   margin: 3rem 2rem;
+`;
+
+export const BottomClubNav = styled.nav`
+  width: 70%;
+  background-color: green;
+  margin: 0 auto;
 `;
