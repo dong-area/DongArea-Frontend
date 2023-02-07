@@ -25,7 +25,14 @@ const Router = () => {
       <Routes>
         <Route
           path="/"
-          element={<Main isToken={isToken} token={token} setUser={setUser} />}
+          element={
+            <Main
+              isToken={isToken}
+              token={token}
+              user={user}
+              setUser={setUser}
+            />
+          }
         ></Route>
         <Route path="/myinfo" element={<MyInfo />}></Route>
         <Route

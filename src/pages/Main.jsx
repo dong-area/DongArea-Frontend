@@ -9,7 +9,7 @@ import axios from "axios";
 const Main = (props) => {
   const [isFreeClub, setIsFreeClub] = useState(false);
   useEffect(() => {
-    if (props.isToken) {
+    if (props.isToken && props.user == null) {
       axios
         .post("", {
           header: { Authorization: `${props.Token}` },

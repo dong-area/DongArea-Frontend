@@ -46,6 +46,7 @@ const SignUp = (props) => {
           })
           .catch((error) => {
             console.error("dd", error);
+            alert("유저 닉네임이 겹칩니다!\n다른 유저 닉네임을 써주세요!");
           });
       } else {
         alert("정보를 제대로 입력해주세요!");
