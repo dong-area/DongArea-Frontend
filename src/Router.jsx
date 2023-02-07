@@ -5,9 +5,10 @@ import MyInfo from "./pages/MyInfo";
 import SignIn from "./pages/Auth/SignIn";
 import SignUp from "./pages/Auth/SignUp";
 import Header from "./components/Header";
-import Board from "./pages/Board";
+import MakingClubBoard from "./pages/MakingClubBoard";
 import MackingClub from "./pages/MackingClub";
 import Collaboration from "./pages/Collaboration";
+import ProjectBoard from "./pages/ProjectBoard";
 
 const Router = () => {
   const [isToken, setIsToken] = useState(false);
@@ -36,8 +37,9 @@ const Router = () => {
           element={<SignUp setIsToken={setIsToken} />}
         ></Route>
         <Route path="/create" element={<MackingClub />}></Route>
-        <Route path="/Board" element={<Board />}></Route>
+        <Route path="/MakingClubBoard" element={<MakingClubBoard />}></Route>
         <Route path="/Collaboration" element={<Collaboration />}></Route>
+        <Route path="/ProjectBoard" element={<ProjectBoard/>}></Route>
       </Routes>
     </BrowserRouter>
   );
