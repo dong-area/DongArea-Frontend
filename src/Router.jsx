@@ -10,16 +10,26 @@ import MackingClub from "./pages/MackingClub";
 import Collaboration from "./pages/Collaboration";
 
 const Router = () => {
-  const [isToken, setIsToken] = useState(true);
+  const [isToken, setIsToken] = useState(false);
+  const [token, setToken] = useState("");
+  const [user, setUser] = useState(null);
   return (
     <BrowserRouter>
-      <Header isToken={isToken}></Header>
+      <Header
+        isToken={isToken}
+        setIsToken={setIsToken}
+        setToken={setToken}
+        setUser={setUser}
+      ></Header>
       <Routes>
-        <Route path="/" element={<Main isToken={isToken} />}></Route>
+        <Route
+          path="/"
+          element={<Main isToken={isToken} token={token} setUser={setUser} />}
+        ></Route>
         <Route path="/myinfo" element={<MyInfo />}></Route>
         <Route
           path="/SignIn"
-          element={<SignIn setIsToken={setIsToken} />}
+          element={<SignIn setIsToken={setIsToken} setToken={setToken} />}
         ></Route>
         <Route
           path="/SignUp"

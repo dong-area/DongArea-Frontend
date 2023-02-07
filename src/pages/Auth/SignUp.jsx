@@ -20,6 +20,7 @@ const SignUp = (props) => {
   };
 
   const onSubmit = (e) => {
+    console.log("Ddd");
     e.preventDefault();
     if (Pw == chPw) {
       if (
@@ -30,17 +31,17 @@ const SignUp = (props) => {
         Club !== ""
       ) {
         axios
-          .post("http://10.80.161.163:8080/auth/join", {
+          .post("/auth/join", {
             id: Id,
             password: Pw,
             username: Name,
             stu_id: ClassNumber,
+            clubname: Club,
           })
           .then((res, req) => {
             //token
             console.log("dd", res);
             alert("계정 생성 성공");
-            props.setIsToken(true);
             GoHome();
           })
           .catch((error) => {
