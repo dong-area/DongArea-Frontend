@@ -26,7 +26,7 @@ export const LeftArea = styled.nav`
   margin: 10%;
   margin-top: 44%;
 `;
-export const MainImgRightArea = styled.nav`
+export const MainImgRightArea = styled.img`
   position: absolute;
   display: inline-block;
   width: 60%;
@@ -34,7 +34,7 @@ export const MainImgRightArea = styled.nav`
   background-color: green;
 `;
 export const Mainform = styled.nav`
-  height: 125.5rem;
+  height: 130rem;
   width: 100%;
   background-color: #1f1f1f;
 `;
@@ -48,6 +48,7 @@ export const BottomForm = styled.nav`
   width: 100%;
   height: 50.7%;
   font-weight: 700;
+  margin-top: 5%;
 `;
 
 export const BottomTitle = styled.div`
@@ -57,9 +58,9 @@ export const BottomTitle = styled.div`
 export const BottomImg = styled.img`
   width: 43.75rem;
   height: 25rem;
-  position absolute;
-  margin : 2.25rem 0rem;
-  margin-left:50%;
+  position: absolute;
+  margin: 4.5rem 0rem 2.25rem 0rem;
+  margin-left: 50%;
 `;
 
 export const BottomBtn = styled.button`
