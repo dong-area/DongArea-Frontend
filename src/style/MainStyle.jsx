@@ -1,5 +1,20 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import "./index.css";
+
+const MoveClubText = keyframes`
+  0%{
+    opacity:0;
+    margin-left:0;
+  }100%P
+  opacity:1;
+  margin-left:1rem;
+`;
+const StartRightArea = keyframes`
+0%{
+  opacity:0;
+}100%P
+opacity:1;
+`;
 
 export const MainImg = styled.div`
   width: 100%;
@@ -11,7 +26,9 @@ export const MainImg = styled.div`
 export const ClubText = styled.p`
   font-size: ${(props) => props.fontSize}rem;
   color: ${(props) => props.color};
+  animation: ${MoveClubText} 1.5s 0s;
   margin: 1rem;
+  animation-fill-mode: forwards;
 `;
 
 export const MainImgLeftArea = styled.nav`
@@ -33,6 +50,8 @@ export const MainImgRightArea = styled.img`
   width: 60%;
   height: 99.9%;
   background-color: green;
+  animation: ${StartRightArea} 1.5s;
+  animation-fill-mode: forwards;
 `;
 export const Mainform = styled.nav`
   height: 130rem;

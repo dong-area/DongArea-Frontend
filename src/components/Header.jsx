@@ -31,16 +31,24 @@ const Header = (props) => {
           >
             개설
           </S.ContentTitleSpan>
-          <S.ContentTitleSpan color={`#fff`}             
-          onClick={() => {
+          <S.ContentTitleSpan
+            color={`#fff`}
+            onClick={() => {
               if (props.isToken) {
                 Navigate("/ProjectBoard");
               } else {
                 Navigate("/SignIn");
               }
-            }}>
-            프로젝트</S.ContentTitleSpan>
-          <S.ContentTitleSpan color={`#fff`}>콜라보</S.ContentTitleSpan>
+            }}
+          >
+            프로젝트
+          </S.ContentTitleSpan>
+          <S.ContentTitleSpan
+            color={`#fff`}
+            onClick={() => Navigate("/Collaboration")}
+          >
+            콜라보
+          </S.ContentTitleSpan>
           {props.isToken ? (
             <>
               <S.ContentTitleSpan color={`#e7aa4a`}>

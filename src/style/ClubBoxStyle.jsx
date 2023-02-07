@@ -1,4 +1,14 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const MoveMainBox = keyframes`
+    0%{
+        opacity:0;
+        margin-top:-1rem;
+    }100%{
+        opacity:1;
+        margin-top:0rem;
+    }
+`;
 
 export const MainBox = styled.div`
   width: 20rem;
@@ -8,6 +18,12 @@ export const MainBox = styled.div`
   float: left;
   border-radius: 0.25rem;
   position: relative;
+  animation: ${MoveMainBox} 1s;
+  transition: 0.3s;
+  animation-fill-mode: forwards;
+  &:hover {
+    transform: translateY(-0.4rem);
+  }
 `;
 
 export const DetailTitle = styled.p`

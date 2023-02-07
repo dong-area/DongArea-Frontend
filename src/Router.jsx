@@ -9,6 +9,7 @@ import MakingClubBoard from "./pages/MakingClubBoard";
 import MackingClub from "./pages/MackingClub";
 import Collaboration from "./pages/Collaboration";
 import ProjectBoard from "./pages/ProjectBoard";
+import ScrollToTop from "./utils/ScrollToTop";
 
 const Router = () => {
   const [isToken, setIsToken] = useState(true);
@@ -16,6 +17,7 @@ const Router = () => {
   const [user, setUser] = useState(null);
   return (
     <BrowserRouter>
+      <ScrollToTop></ScrollToTop>
       <Header
         isToken={isToken}
         setIsToken={setIsToken}
