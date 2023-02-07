@@ -66,7 +66,7 @@ export const SubmitButton = styled.button`
   height: 3.125rem;
   border-radius: 0.25rem;
   float: right;
-  margin: 2rem 2rem;
+  margin: ${(props) => props.margin};
   background-color: #1f1f1f;
   color: #d9d9d9;
   box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.4);
@@ -82,4 +82,10 @@ export const BackgroundFont = styled.p`
   z-index: -1;
   color: #c8c8c84f;
   margin: ${(props) => props.margin};
+`;
+
+export const BottomImg = styled.img`
+  width: 23.75rem;
+  position: absolute;
+  padding: 4rem 2rem;
 `;

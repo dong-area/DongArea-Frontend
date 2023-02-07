@@ -57,7 +57,9 @@ const SignIn = () => {
             />
             <S.InputBottomLine />
           </S.InputGroup>
-          <S.SubmitButton type="submit">sign in</S.SubmitButton>
+          <S.SubmitButton margin="2rem 2rem" type="submit">
+            sign in
+          </S.SubmitButton>
         </form>
       </S.CenterBox>
     </S.EntireBox>

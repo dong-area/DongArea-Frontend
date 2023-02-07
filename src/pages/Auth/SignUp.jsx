@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import * as S from "../../style/AuthStyle";
+import laptop from "../../asset/notebook.png";
 
 //회원가입
 const SignUp = () => {
@@ -45,6 +46,7 @@ const SignUp = () => {
             height={"50.5rem"}
             margin={"-6rem auto"}
           >
+            <S.Title>Sign Up</S.Title>
             <S.InputGroup>
               <S.InputSpan>이름</S.InputSpan>
               <S.InputTag
@@ -105,7 +107,10 @@ const SignUp = () => {
               />
               <S.InputBottomLine />
             </S.InputGroup>
-            <button type="submit">Sign Up</button>
+            <S.BottomImg src={laptop} alt="laptop" />
+            <S.SubmitButton margin="10rem 2rem" type="submit">
+              Sign Up
+            </S.SubmitButton>
           </S.CenterBox>
         </form>
       </S.EntireBox>
