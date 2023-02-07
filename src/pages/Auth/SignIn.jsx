@@ -2,16 +2,21 @@ import axios from "axios";
 import React, { useState } from "react";
 import * as S from "../../style/AuthStyle";
 import laptop from "../../asset/notebook.png";
+import { useNavigate } from "react-router-dom";
 
 //로그인
-const SignIn = () => {
+const SignIn = (props) => {
   const [Id, setId] = useState("");
   const [Pw, setPw] = useState("");
+  const Navigate = useNavigate();
 
+  const GoHome = () => {
+    Navigate("/");
+  };
   const onSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("/login", {
+      .post("http://10.80.161.163:8080/login", {
         id: Id,
         password: Pw,
       })
@@ -19,8 +24,11 @@ const SignIn = () => {
         //token
         console.log(res);
         alert("로그인 성공");
+        props.setIsToken(true);
+        GoHome();
       })
       .catch((error) => {
+        alert("아이디 및 비밀번호를 다시 입력해주세요!");
         console.error(error);
       });
   };

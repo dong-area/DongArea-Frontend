@@ -2,9 +2,10 @@ import axios from "axios";
 import React, { useState } from "react";
 import * as S from "../../style/AuthStyle";
 import laptop from "../../asset/notebook.png";
+import { useNavigate } from "react-router-dom";
 
 //회원가입
-const SignUp = () => {
+const SignUp = (props) => {
   const [Id, setId] = useState("");
   const [Pw, setPw] = useState("");
   const [chPw, setChPw] = useState("");
@@ -12,24 +13,42 @@ const SignUp = () => {
   const [Club, setClub] = useState("");
   const [ClassNumber, setClassNumber] = useState("");
 
+  const Navigate = useNavigate();
+
+  const GoHome = () => {
+    Navigate("/");
+  };
+
   const onSubmit = (e) => {
     e.preventDefault();
     if (Pw == chPw) {
-      axios
-        .post("http://10.80.161.163:8080/auth/join", {
-          id: Id,
-          password: Pw,
-          username: Name,
-          stu_id: ClassNumber,
-        })
-        .then((res, req) => {
-          //token
-          console.log("dd", res);
-          alert("계정 생성 성공");
-        })
-        .catch((error) => {
-          console.error("dd", error);
-        });
+      if (
+        Id !== "" &&
+        Pw !== "" &&
+        Name !== "" &&
+        ClassNumber !== "" &&
+        Club !== ""
+      ) {
+        axios
+          .post("http://10.80.161.163:8080/auth/join", {
+            id: Id,
+            password: Pw,
+            username: Name,
+            stu_id: ClassNumber,
+          })
+          .then((res, req) => {
+            //token
+            console.log("dd", res);
+            alert("계정 생성 성공");
+            props.setIsToken(true);
+            GoHome();
+          })
+          .catch((error) => {
+            console.error("dd", error);
+          });
+      } else {
+        alert("정보를 제대로 입력해주세요!");
+      }
     } else {
       alert("비밀번호를 확인해주세요!");
     }
@@ -108,7 +127,7 @@ const SignUp = () => {
               <S.InputBottomLine />
             </S.InputGroup>
             <S.BottomImg src={laptop} alt="laptop" />
-            <S.SubmitButton margin="10rem 2rem" type="submit">
+            <S.SubmitButton margin="10rem -3rem" type="submit">
               Sign Up
             </S.SubmitButton>
           </S.CenterBox>

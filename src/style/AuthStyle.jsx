@@ -30,6 +30,7 @@ export const CenterBox = styled.nav`
   border-radius: 1.25rem;
   padding: 2rem;
   font-family: "Roboto";
+  z-index: -2;
 `;
 
 export const InputSpan = styled.span`
@@ -70,6 +71,7 @@ export const SubmitButton = styled.button`
   background-color: #1f1f1f;
   color: #d9d9d9;
   box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.4);
+  position: absolute;
 `;
 
 export const BackgroundFont = styled.p`
@@ -79,13 +81,12 @@ export const BackgroundFont = styled.p`
   font-size: 37.5rem;
   line-height: 45.375rem;
   letter-spacing: 0.07em;
-  z-index: -1;
+  z-index: -3;
   color: #c8c8c84f;
   margin: ${(props) => props.margin};
 `;
 
 export const BottomImg = styled.img`
   width: 23.75rem;
-  position: absolute;
   padding: 4rem 2rem;
 `;

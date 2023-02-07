@@ -5,7 +5,7 @@ import * as S from "../style/MainStyle";
 import School from "../asset/school.png";
 import ClubBox from "../components/ClubBox";
 
-const Main = () => {
+const Main = (props) => {
   const [isFreeClub, setIsFreeClub] = useState(false);
   return (
     <S.Mainform>
