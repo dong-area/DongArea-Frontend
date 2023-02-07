@@ -5,6 +5,7 @@ export const MainImg = styled.div`
   width: 100%;
   height: 62.5rem;
   background-color: black;
+  position: relative;
 `;
 
 export const ClubText = styled.p`
@@ -37,6 +38,15 @@ export const Mainform = styled.nav`
   height: 130rem;
   width: 100%;
   background-color: #1f1f1f;
+`;
+
+export const MainScrollAlert = styled.div`
+  position: absolute;
+  bottom: 2rem;
+  text-align: center;
+  width: 100%;
+  font-size: 2rem;
+  color: #e7aa4a;
 `;
 
 export const ClubSpanText = styled.span`

@@ -121,6 +121,7 @@ const Main = (props) => {
           src={ClubData[posterIndex].poster}
           alt="dd"
         ></S.MainImgRightArea>
+        <S.MainScrollAlert>Scoll for more</S.MainScrollAlert>
       </S.MainImg>
       <S.BottomForm>
         <S.BottomImg src={School} alt="school" />

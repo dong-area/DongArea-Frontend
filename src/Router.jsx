@@ -11,8 +11,8 @@ import Collaboration from "./pages/Collaboration";
 import ProjectBoard from "./pages/ProjectBoard";
 
 const Router = () => {
-  const [isToken, setIsToken] = useState(false);
-  const [token, setToken] = useState("");
+  const [isToken, setIsToken] = useState(true);
+  const [token, setToken] = useState("dd");
   const [user, setUser] = useState(null);
   return (
     <BrowserRouter>
@@ -46,7 +46,7 @@ const Router = () => {
         <Route path="/create" element={<MackingClub />}></Route>
         <Route path="/MakingClubBoard" element={<MakingClubBoard />}></Route>
         <Route path="/Collaboration" element={<Collaboration />}></Route>
-        <Route path="/ProjectBoard" element={<ProjectBoard/>}></Route>
+        <Route path="/ProjectBoard" element={<ProjectBoard />}></Route>
       </Routes>
     </BrowserRouter>
   );
