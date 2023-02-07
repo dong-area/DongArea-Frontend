@@ -8,7 +8,8 @@ const Header = (props) => {
   useEffect(() => {
     if (
       window.location.pathname == "/SignIn" ||
-      window.location.pathname == "/SignUp"
+      window.location.pathname == "/SignUp" ||
+      window.location.pathname == "/create"
     )
       setIsSignInUp(true);
     else setIsSignInUp(false);
@@ -37,7 +38,12 @@ const Header = (props) => {
               <S.ContentTitleSpan color={`#e7aa4a`}>
                 내 동아리
               </S.ContentTitleSpan>
-              <S.ContentTitleSpan color={`#e7aa4a`}>내 정보</S.ContentTitleSpan>
+              <S.ContentTitleSpan
+                color={`#e7aa4a`}
+                onClick={() => Navigate("/myinfo")}
+              >
+                내 정보
+              </S.ContentTitleSpan>
             </>
           ) : (
             <>
