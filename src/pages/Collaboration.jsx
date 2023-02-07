@@ -1,4 +1,5 @@
 import * as S from "../style/CollaborationStyle";
+import M from "../asset/Mo.png";
 
 const Collaboration = () => {
   return (
@@ -15,6 +16,17 @@ const Collaboration = () => {
           clubs.
         </S.Title3>
       </S.WholeTitle>
+      <S.Monitor src={M}></S.Monitor>
+      <S.MonitorInsideNavBar top={7.5}>
+        <S.MonitorInsideNav></S.MonitorInsideNav>
+        <S.MonitorInsideNav></S.MonitorInsideNav>
+        <S.MonitorInsideNav></S.MonitorInsideNav>
+      </S.MonitorInsideNavBar>
+      <S.MonitorInsideNavBar top={70}>
+        <S.MonitorInsideNav></S.MonitorInsideNav>
+        <S.MonitorInsideNav></S.MonitorInsideNav>
+        <S.MonitorInsideNav></S.MonitorInsideNav>
+      </S.MonitorInsideNavBar>
     </>
   );
 };

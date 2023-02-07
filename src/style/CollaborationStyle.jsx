@@ -32,7 +32,7 @@ const AniTitle3 = keyframes`
 export const Body = createGlobalStyle`
     body{
         width: 100%;
-        height: 100%;
+        height: 500%;
         background-color: #000000;
     }
 `;
@@ -42,6 +42,7 @@ export const WholeTitle = styled.div`
   margin-left: 2rem;
   display: flex;
   flex-direction: column;
+  position: absolute;
 `;
 
 export const Title1 = styled.div`
@@ -68,4 +69,27 @@ export const Title3 = styled.div`
   opacity: 0;
   animation-delay: 1s;
   animation-fill-mode: forwards;
+`;
+
+export const Monitor = styled.img`
+  width: 100%;
+  margin-top: 40rem;
+  position: absolute;
+`;
+
+export const MonitorInsideNavBar = styled.nav`
+  margin: 50rem auto;
+  position: absolute;
+  display: flex;
+  width: 89.5%;
+  top: ${(props) => props.top}%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: space-between;
+`;
+
+export const MonitorInsideNav = styled.nav`
+  height: 14rem;
+  width: 24.5rem;
+  background-color: green;
 `;
