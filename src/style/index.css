@@ -7,3 +7,10 @@
   font-family: "Nanum";
   src: url("./font/NanumMyeongjo.ttf");
 }
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./font/Roboto-Bold.ttf");
+  font-family: "Roboto-light";
+  src: url("./font/Roboto-Thin.ttf");
+}
