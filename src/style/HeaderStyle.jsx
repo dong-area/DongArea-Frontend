@@ -35,3 +35,11 @@ export const ContentTitleSpan = styled.span`
     padding-bottom: 1.4rem;
   }
 `;
+
+export const NotiIcon = styled.img`
+  width: 1.875rem;
+  height: 2.313rem;
+  margin-right: 2rem;
+  margin-top: 1.5rem;
+
+`

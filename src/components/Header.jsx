@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as S from "../style/HeaderStyle";
+import NotiOn from "../asset/NotiOn.png";
+import NotiOff from "../asset/NotiOff.png";
 
 const Header = (props) => {
   const [isSignInUp, setIsSignInUp] = useState(false);
@@ -88,6 +90,7 @@ const Header = (props) => {
           )}
         </S.TitleNav>
       )}
+      <S.NotiIcon src={NotiOff}></S.NotiIcon>
     </S.Header>
   );
 };
