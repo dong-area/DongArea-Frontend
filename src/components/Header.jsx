@@ -62,7 +62,8 @@ const Header = (props) => {
               >
                 내 정보
               </S.ContentTitleSpan>
-              <button
+              <S.ContentTitleSpan
+                color={`#e7aa4a`}
                 onClick={() => {
                   props.setToken("");
                   props.setIsToken("");
@@ -70,7 +71,7 @@ const Header = (props) => {
                 }}
               >
                 로그아웃
-              </button>
+              </S.ContentTitleSpan>
             </>
           ) : (
             <>
