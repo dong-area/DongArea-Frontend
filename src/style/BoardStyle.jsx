@@ -89,3 +89,66 @@ export const WriteBtn = styled.button`
   bottom: 0;
   margin: 0rem 3rem 3rem 0rem;
 `;
+
+export const PostSqare = styled.div`
+  width: 40rem;
+  height: 51rem;
+  background-color: #171717;
+  border: 5px solid #E7AA4A;
+  border-radius: 10px;
+
+  position: fixed;
+  left: 80rem;
+  top : 10rem;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+`
+
+export const ShadowSqare = styled.div`
+  width: 30.938rem;
+  height: 30.938rem;
+  background-color: #585757;
+
+  position: fixed;
+  left: 77rem;
+  top: 33rem;
+`
+
+export const PostBoxTitle = styled.div`
+  color: #FFFFFF;
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin-top: 3.75rem;
+`
+
+export const PostBoxWriter = styled.div`
+  font-size: 1rem;
+  color: #FFFFFF;
+  margin-top: 0.5rem;
+`
+
+export const PostBoxHr = styled.div`
+  width: 25.813rem;
+  height: 0.1rem;
+  background-color: #E7AA4A;
+  margin-top: 1.1rem;
+  box-shadow: 0px 4px 4px #FFFFFF;
+`
+
+export const PostBoxImg = styled.img`
+  width: 25.813rem;
+  height: 14.313rem;
+  object-fit: contain;
+
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  color: #FFFFFF;
+`
+
+export const PostBoxContext = styled.div`
+  font-size: 1.25rem;
+  color: #FFFFFF;
+  width: 25.813rem;
+`
