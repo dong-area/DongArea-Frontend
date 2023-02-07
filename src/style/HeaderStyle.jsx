@@ -6,6 +6,7 @@ export const Header = styled.header`
   position: fixed;
   height: 4rem;
   display: flex;
+  z-index: 1;
 `;
 
 export const TitleNav = styled.nav`

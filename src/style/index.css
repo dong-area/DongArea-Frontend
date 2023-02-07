@@ -13,4 +13,6 @@
   src: url("./font/Roboto-Bold.ttf");
   font-family: "Roboto-light";
   src: url("./font/Roboto-Thin.ttf");
+  font-family: "Roboto-black";
+  src: url("./font/Roboto-Black.ttf");
 }
