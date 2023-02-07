@@ -23,7 +23,7 @@ const Header = (props) => {
             color={`#fff`}
             onClick={() => {
               if (props.isToken) {
-                Navigate("/Board");
+                Navigate("/MakingClubBoard");
               } else {
                 Navigate("/SignIn");
               }
@@ -31,7 +31,15 @@ const Header = (props) => {
           >
             개설
           </S.ContentTitleSpan>
-          <S.ContentTitleSpan color={`#fff`}>프로젝트</S.ContentTitleSpan>
+          <S.ContentTitleSpan color={`#fff`}             
+          onClick={() => {
+              if (props.isToken) {
+                Navigate("/ProjectBoard");
+              } else {
+                Navigate("/SignIn");
+              }
+            }}>
+            프로젝트</S.ContentTitleSpan>
           <S.ContentTitleSpan color={`#fff`}>콜라보</S.ContentTitleSpan>
           {props.isToken ? (
             <>
