@@ -22,7 +22,7 @@ const Header = (props) => {
             color={`#fff`}
             onClick={() => {
               if (props.isToken) {
-                Navigate("/create");
+                Navigate("/Board");
               } else {
                 Navigate("/SignIn");
               }

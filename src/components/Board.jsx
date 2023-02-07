@@ -1,8 +1,28 @@
 import * as S from "../style/BoardStyle";
 import BoardImg from "../asset/BoardImg.png";
 import WriteButton from "../asset/WriteButton.png"
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import axios from "axios";
 
-const Board = (title, post) => {
+//개설 게시판
+const Board = () => {
+  const navigate = useNavigate();
+
+/*  useEffect(()=>{
+    axios.get(``)
+    .then((res,req)=>{
+      console.log(res)
+    })
+    .catch((error)=>{
+      console.error(error)
+    })
+  }) */
+
+  const GoWrite = () => {
+    navigate('/create')
+  }
+
   return (
     <>
       <S.Body />
@@ -14,7 +34,7 @@ const Board = (title, post) => {
 
 
         <S.Post>
-          <S.Title>Title 게시판</S.Title>
+          <S.Title>개설 게시판</S.Title>
           <S.PostTop/>
           
           <S.Each>
@@ -34,7 +54,7 @@ const Board = (title, post) => {
 
           <S.PostBottom/>
         </S.Post>
-        <S.WriteBtn>
+        <S.WriteBtn onClick={GoWrite}>
           <img src={WriteButton} alt='글쓰기 버튼'/>
         </S.WriteBtn>
       </S.Wrapper>
