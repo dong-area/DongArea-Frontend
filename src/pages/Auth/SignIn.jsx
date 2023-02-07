@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import * as S from "../../style/AuthStyle";
 import laptop from "../../asset/notebook.png";
 import { useNavigate } from "react-router-dom";
+import BaseAxios from "../../utils/BaseAxios";
 
 //로그인
 const SignIn = (props) => {
@@ -15,7 +16,7 @@ const SignIn = (props) => {
   };
   const onSubmit = (e) => {
     e.preventDefault();
-    axios
+    BaseAxios
       .post("/login", {
         id: Id,
         password: Pw,

@@ -36,7 +36,7 @@ const Router = () => {
             />
           }
         ></Route>
-        <Route path="/myinfo" element={<MyInfo />}></Route>
+        <Route path="/myinfo" element={<MyInfo />} Token={token}></Route>
         <Route
           path="/SignIn"
           element={<SignIn setIsToken={setIsToken} setToken={setToken} />}

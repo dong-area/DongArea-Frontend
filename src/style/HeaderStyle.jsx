@@ -39,7 +39,7 @@ export const ContentTitleSpan = styled.span`
 export const NotiIcon = styled.img`
   width: 1.875rem;
   height: 2.313rem;
-  margin-right: 2rem;
-  margin-top: 1.5rem;
-
+  position: fixed;
+  top:2rem;
+  left:95%;
 `
