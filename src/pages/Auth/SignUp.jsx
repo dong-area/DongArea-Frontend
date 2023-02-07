@@ -36,31 +36,31 @@ const SignUp = () => {
         <S.BackgroundFont margin="-16rem 0rem">DONG</S.BackgroundFont>
         <S.BackgroundFont margin="20rem 8rem">ARIA</S.BackgroundFont>
         <form onSubmit={onSubmit}>
-          <input
+          <S.InputTag
             className="id"
             placeholder="Id"
             value={Id}
             onChange={(e) => setId(e.target.value)}
           />
-          <input
+          <S.InputTag
             className="password"
             placeholder="비밀번호"
             value={Pw}
             onChange={(e) => setPw(e.target.value)}
           />
-          <input
+          <S.InputTag
             className="name"
             placeholder="이름"
             value={Name}
             onChange={(e) => setName(e.target.value)}
           />
-          <input
+          <S.InputTag
             className="club"
             placeholder="동아리"
             value={Club}
             onChange={(e) => setClub(e.target.value)}
           />
-          <input
+          <S.InputTag
             className="class"
             placeholder="학번"
             value={ClassNumber}
