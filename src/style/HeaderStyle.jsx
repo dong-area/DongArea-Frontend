@@ -7,6 +7,7 @@ export const Header = styled.header`
   height: 4rem;
   display: flex;
   z-index: 1;
+  /* backdrop-filter: blur(20px); */
 `;
 
 export const TitleNav = styled.nav`
