@@ -3,7 +3,7 @@ import "./index.css";
 
 export const MainImg = styled.div`
   width: 100%;
-  height: 60rem;
+  height: 62.5rem;
   background-color: black;
 `;
 
@@ -25,4 +25,57 @@ export const LeftArea = styled.nav`
   height: 50%;
   margin: 10%;
   margin-top: 44%;
+`;
+export const MainImgRightArea = styled.nav`
+  position: absolute;
+  display: inline-block;
+  width: 60%;
+  height: 99.9%;
+  background-color: green;
+`;
+export const Mainform = styled.nav`
+  height: 125.5rem;
+  width: 100%;
+  background-color: #1f1f1f;
+`;
+
+export const ClubSpanText = styled.span`
+  color: white;
+`;
+
+export const BottomForm = styled.nav`
+  background-color: #1f1f1f;
+  width: 100%;
+  height: 50%;
+  font-weight: 700;
+`;
+
+export const BottomTitle = styled.div`
+  padding: 4% 4% 2% 6%;
+`;
+
+export const BottomImg = styled.img`
+  width: 43.75rem;
+  height: 25rem;
+  position absolute;
+  margin : 2.25rem 0rem;
+  margin-left:50%;
+`;
+
+export const BottomBtn = styled.button`
+  background-color: transparent;
+  color: ${(props) => (props.isFree ? "#e7aa4a" : "#fff")};
+  border: 3px solid ${(props) => (props.isFree ? "#e7aa4a" : "#fff")};
+  font-family: "Nanum";
+  padding: 0.7rem 4.5rem;
+  margin-right: 2rem;
+  font-size: 1.5rem;
+  &:hover {
+    color: #e7aa4a;
+    border: 3px solid #e7aa4a;
+  }
+`;
+
+export const BottomBtnNav = styled.nav`
+  margin: 3rem 2rem;
 `;
