@@ -4,6 +4,7 @@ import WriteButton from "../asset/WriteButton.png"
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import BaseAxios from "../utils/BaseAxios";
 
 //프로젝트 게시판
 const Board = () => {
@@ -12,7 +13,7 @@ const Board = () => {
   const [content, setContent] = useState(-1)
 
   useEffect(()=>{
-    axios.get('http://10.80.161.163:8080/club/post/list')
+    BaseAxios.get('/club/post/list')
     .then((res,req)=>{
       setPostList(res.data.postPage.content)
     })

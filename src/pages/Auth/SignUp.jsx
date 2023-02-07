@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import * as S from "../../style/AuthStyle";
 import laptop from "../../asset/notebook.png";
 import { useNavigate } from "react-router-dom";
+import BaseAxios from "../../utils/BaseAxios";
 
 //회원가입
 const SignUp = (props) => {
@@ -30,7 +31,7 @@ const SignUp = (props) => {
         ClassNumber !== "" &&
         Club !== ""
       ) {
-        axios
+        BaseAxios
           .post("/auth/join", {
             id: Id,
             password: Pw,
