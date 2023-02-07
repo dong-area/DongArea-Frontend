@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as S from "../style/HeaderStyle";
 
-const Header = () => {
-  const [isToken, setIsToken] = useState(false);
+const Header = (props) => {
   const [isSignInUp, setIsSignInUp] = useState(false);
   const Navigate = useNavigate();
   useEffect(() => {
@@ -19,10 +18,21 @@ const Header = () => {
       <S.ContentSpan onClick={() => Navigate("/")}>D.A</S.ContentSpan>
       {isSignInUp ? null : (
         <S.TitleNav>
-          <S.ContentTitleSpan color={`#fff`}>개설</S.ContentTitleSpan>
+          <S.ContentTitleSpan
+            color={`#fff`}
+            onClick={() => {
+              if (props.isToken) {
+                Navigate("/create");
+              } else {
+                Navigate("/SignIn");
+              }
+            }}
+          >
+            개설
+          </S.ContentTitleSpan>
           <S.ContentTitleSpan color={`#fff`}>프로젝트</S.ContentTitleSpan>
           <S.ContentTitleSpan color={`#fff`}>콜라보</S.ContentTitleSpan>
-          {isToken ? (
+          {props.isToken ? (
             <>
               <S.ContentTitleSpan color={`#e7aa4a`}>
                 내 동아리
