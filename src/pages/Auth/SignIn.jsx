@@ -16,14 +16,15 @@ const SignIn = (props) => {
   const onSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://10.80.161.163:8080/login", {
+      .post("/login", {
         id: Id,
         password: Pw,
       })
-      .then((res, req) => {
+      .then((res) => {
         //token
         console.log(res);
         alert("로그인 성공");
+        props.setToken(res.authorization);
         props.setIsToken(true);
         GoHome();
       })

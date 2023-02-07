@@ -46,7 +46,7 @@ export const Each = styled.div`
   border-bottom: 2px solid #d9d9d9;
 `;
 
-export const PostTitle = styled.label`
+export const PostTitle = styled.div`
   color: #ffffff;
   font-size: 1.25rem;
 `;

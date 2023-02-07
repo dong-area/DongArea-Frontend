@@ -1,12 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Slogan from "../components/Slogan";
 import * as S from "../style/MainStyle";
 import School from "../asset/school.png";
 import ClubBox from "../components/ClubBox";
+import axios from "axios";
 
 const Main = (props) => {
   const [isFreeClub, setIsFreeClub] = useState(false);
+  useEffect(() => {
+    if (props.isToken) {
+      axios
+        .post("", {
+          header: { Authorization: `${props.Token}` },
+        })
+        .then((e) => {
+          console.log("suc", e);
+          props.setUser(e);
+        })
+        .catch((e) => {
+          console.log("error", e);
+        });
+    }
+  }, []);
   return (
     <S.Mainform>
       <S.MainImg>

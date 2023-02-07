@@ -44,6 +44,15 @@ const Header = (props) => {
               >
                 내 정보
               </S.ContentTitleSpan>
+              <button
+                onClick={() => {
+                  props.setToken("");
+                  props.setIsToken("");
+                  props.setUser(null);
+                }}
+              >
+                로그아웃
+              </button>
             </>
           ) : (
             <>
