@@ -5,7 +5,7 @@ import MyInfo from "./pages/MyInfo";
 import SignIn from "./pages/Auth/SignIn";
 import SignUp from "./pages/Auth/SignUp";
 import Header from "./components/Header";
-import Board from "./components/Board";
+import Board from "./pages/Board";
 import MackingClub from "./pages/MackingClub";
 import Collaboration from "./pages/Collaboration";
 
