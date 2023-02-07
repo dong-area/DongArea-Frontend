@@ -25,7 +25,7 @@ export const CenterBox = styled.nav`
   font-weight: bold;
   width: 32.375rem;
   height: 42.75rem;
-  background-color: #d9d9d9;
+  background-color: #fff;
   margin: -2rem auto;
   border-radius: 1.25rem;
   padding: 2rem;
