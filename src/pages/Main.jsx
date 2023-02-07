@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Slogan from "../components/Slogan";
 import * as S from "../style/MainStyle";
 import School from "../asset/school.png";
+import ClubBox from "../components/ClubBox";
 
 const Main = () => {
   const [isFreeClub, setIsFreeClub] = useState(false);
@@ -46,6 +47,14 @@ const Main = () => {
             </S.BottomBtn>
           </S.BottomBtnNav>
         </S.BottomTitle>
+        <S.BottomClubNav>
+          <ClubBox></ClubBox>
+          <ClubBox></ClubBox>
+          <ClubBox></ClubBox>
+          <ClubBox></ClubBox>
+          <ClubBox></ClubBox>
+          <ClubBox></ClubBox>
+        </S.BottomClubNav>
       </S.BottomForm>
     </S.Mainform>
   );
