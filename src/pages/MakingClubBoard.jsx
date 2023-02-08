@@ -15,6 +15,7 @@ const Board = () => {
   useEffect(() => {
     BaseAxios.get("/club/post/list")
       .then((res, req) => {
+        console.log(res);
         setPostList(res.data.postPage.content);
       })
       .catch((error) => {
@@ -52,7 +53,7 @@ const Board = () => {
         {content === -1 ? (
           <>
             <S.RightImg>
-              <S.Img src={BoardImg} alt="BoardImg" />
+              <S.Img src={BoardImg} />
             </S.RightImg>
           </>
         ) : (

@@ -13,7 +13,7 @@ const Board = () => {
   const [content, setContent] = useState(-1);
 
   useEffect(() => {
-    BaseAxios.get("/club/post/list")
+    BaseAxios.get("/project/post/list")
       .then((res, req) => {
         setPostList(res.data.postPage.content);
       })

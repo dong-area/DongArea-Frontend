@@ -4,6 +4,7 @@ import * as S from "../style/HeaderStyle";
 import NotiOn from "../asset/NotiOn.png";
 import NotiOff from "../asset/NotiOff.png";
 import Modal from "./Modal";
+import BaseAxios from "../utils/BaseAxios";
 
 const Header = (props) => {
   const [isSignInUp, setIsSignInUp] = useState(false);
@@ -23,6 +24,14 @@ const Header = (props) => {
     if (localStorage.getItem("token") != null) {
       props.setToken(localStorage.getItem("token"));
       props.setIsToken(true);
+      BaseAxios.get("/authed/user/userinfo", {
+        headers: {
+          Authorization: `${localStorage.getItem("token")}`,
+        },
+      }).then((e) => {
+        console.log("user", e);
+        props.setUser(e.data.username);
+      });
     }
   }, []);
 

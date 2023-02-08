@@ -1,36 +1,44 @@
-import React from "react";
+import React, { useRef, useState, useMemo } from "react";
 import * as S from "../style/MackingClubStyle";
-import react, { useRef, useState, useMemo } from "react";
 import Background from "../asset/dongarea.png";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import BaseAxios from "../utils/BaseAxios";
 
-const MakingProj = () => {
+//개설 글쓰기
+const MackingClub = (props) => {
+  const navigate = useNavigate();
   const [title, setTitle] = useState("");
   const [info, setInfo] = useState("");
   const [img, setImg] = useState(null);
-  const Navigate = useNavigate();
 
-  const PostAxios = (url) => {
-    axios.post("/project/post/write", {
+  const PostAxios = (image_url) => {
+    console.log(title);
+    console.log(image_url);
+    console.log(info);
+
+    BaseAxios.post("/project/post/write", {
       title: title,
       context: info,
-      image_url: url,
+      writer: props.user,
+      image_url: image_url,
+    }).then((e) => {
+      console.log(e);
     });
   };
 
   const CheckUpload = () => {
-    if (title == "" || info == "" || img == null) {
+    if (title == "" || info == "") {
       alert("정보를 정확하세 입력해주세요");
     } else {
-      const image_url = img.thumbnail;
-      let url = image_url.slice(5);
       let Check = window.confirm(
         title + "\n" + info + "\n" + "를 올리시겠습니까?"
       );
       if (Check) {
+        const image_url = img.thumbnail;
+        let url = image_url.slice(5);
         PostAxios(url);
-        Navigate("/ProjectBoard");
+        navigate("/ProjectBoard");
       }
     }
   };
@@ -96,4 +104,4 @@ const MakingProj = () => {
   );
 };
 
-export default MakingProj;
+export default MackingClub;
