@@ -3,11 +3,13 @@ import * as S from "../style/MackingClubStyle";
 import react, { useRef, useState, useMemo } from "react";
 import Background from "../asset/dongarea.png";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const MakingProj = () => {
   const [title, setTitle] = useState("");
   const [info, setInfo] = useState("");
   const [img, setImg] = useState(null);
+  const Navigate = useNavigate();
 
   const PostAxios = (image_url) => {
     axios.post("/project/post/write", {
@@ -18,16 +20,17 @@ const MakingProj = () => {
   };
 
   const CheckUpload = () => {
-    const image_url = img.thumbnail;
-    console.log(image_url.slice(5));
     if (title == "" || info == "" || img == null) {
       alert("정보를 정확하세 입력해주세요");
     } else {
+      const image_url = img.thumbnail;
+      console.log(image_url.slice(5));
       let Check = window.confirm(
         title + "\n" + info + "\n" + "를 올리시겠습니까?"
       );
       if (Check) {
         PostAxios(image_url);
+        Navigate("/ProjectBoard");
       }
     }
   };
@@ -50,7 +53,7 @@ const MakingProj = () => {
       <S.BackGroundImg src={Background} alt="사진" />
       <S.SideBar></S.SideBar>
       <S.MainBox>
-        <S.MainTitle>개설 글쓰기</S.MainTitle>
+        <S.MainTitle>프로젝트 글쓰기</S.MainTitle>
         <S.TitleHr />
         <S.InputNav>
           <S.InputGroup>
