@@ -63,7 +63,7 @@ const Router = () => {
         <Route path="/MakingClubBoard" element={<MakingClubBoard />}></Route>
         <Route path="/Collaboration" element={<Collaboration />}></Route>
         <Route path="/ProjectBoard" element={<ProjectBoard />}></Route>
-        <Route path="/myclub" element={<MyClub />}></Route>
+        <Route path="/myclub" element={<MyClub token={token}/>}></Route>
       </Routes>
     </BrowserRouter>
   );
