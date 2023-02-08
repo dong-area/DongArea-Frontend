@@ -14,7 +14,7 @@ import MyClub from "./pages/MyClub";
 import MakingProj from "./pages/MakingProj";
 const Router = () => {
   const [isToken, setIsToken] = useState(true);
-  const [token, setToken] = useState("dd");
+  const [token, setToken] = useState("");
   const [user, setUser] = useState(null);
   return (
     <BrowserRouter>
@@ -37,7 +37,11 @@ const Router = () => {
             />
           }
         ></Route>
-        <Route path="/myinfo" element={<MyInfo token={token}/>}></Route>
+        <Route path="/myinfo" element={<MyInfo 
+        token={token} 
+        setIsToken={setIsToken}
+        setToken={setToken}
+        setUser={setUser}/>}></Route>
         <Route
           path="/SignIn"
           element={<SignIn setIsToken={setIsToken} setToken={setToken} />}
