@@ -23,9 +23,8 @@ const SignIn = (props) => {
       })
       .then((res) => {
         //token
-        console.log(res);
         alert("로그인 성공");
-        props.setToken(res.authorization);
+        props.setToken(res.headers.authorization);
         props.setIsToken(true);
         GoHome();
       })
