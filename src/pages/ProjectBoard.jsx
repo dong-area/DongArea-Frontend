@@ -15,6 +15,7 @@ const Board = () => {
   useEffect(() => {
     BaseAxios.get("/project/post/list")
       .then((res, req) => {
+        console.log(res.data);
         setPostList(res.data.postPage.content);
       })
       .catch((error) => {
@@ -62,7 +63,7 @@ const Board = () => {
               <S.PostBoxTitle> {PostList[content].title} </S.PostBoxTitle>
               <S.PostBoxWriter>{PostList[content].writer}</S.PostBoxWriter>
               <S.PostBoxHr />
-              <S.PostBoxImg src={PostList[content].image_url} alt="No Image" />
+              <S.PostBoxImg src={PostList[content].image_url} alt="no Img" />
               <S.PostBoxContext>{PostList[content].context}</S.PostBoxContext>
             </S.PostSqare>
           </>

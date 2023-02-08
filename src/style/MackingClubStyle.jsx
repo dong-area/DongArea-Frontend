@@ -81,8 +81,8 @@ export const InputNav = styled.span`
   margin: 0rem auto;
 `;
 
-export const InputFile = styled.div`
-  width: 8rem;
+export const InputFileNone = styled.input`
+  width: 12rem;
   padding: 0.5rem 0;
   text-align: center;
   background-color: transparent;
@@ -90,10 +90,6 @@ export const InputFile = styled.div`
   border: 0.2rem solid #e7a809;
   color: #e7a809;
   font-family: "Nanum";
-`;
-
-export const InputFileNone = styled.input`
-  display: none;
 `;
 
 export const UploadBtn = styled.button`

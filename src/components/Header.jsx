@@ -87,10 +87,14 @@ const Header = (props) => {
               <S.ContentTitleSpan
                 color={`#e7aa4a`}
                 onClick={() => {
-                  props.setToken("");
-                  props.setIsToken("");
-                  props.setUser(null);
-                  localStorage.removeItem("token");
+                  let Real = window.confirm("로그아웃 하시겠습니까?");
+                  if (Real) {
+                    props.setToken("");
+                    props.setIsToken("");
+                    props.setUser(null);
+                    localStorage.removeItem("token");
+                    Navigate("/");
+                  }
                 }}
               >
                 로그아웃

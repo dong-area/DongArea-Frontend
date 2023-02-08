@@ -11,7 +11,6 @@ const Board = () => {
   const navigate = useNavigate();
   const [PostList, setPostList] = useState([]);
   const [content, setContent] = useState(-1);
-
   useEffect(() => {
     BaseAxios.get("/club/post/list")
       .then((res, req) => {
@@ -63,13 +62,7 @@ const Board = () => {
               <S.PostBoxTitle> {PostList[content].title} </S.PostBoxTitle>
               <S.PostBoxWriter>{PostList[content].writer}</S.PostBoxWriter>
               <S.PostBoxHr />
-              <S.PostBoxImg
-                src={PostList[content].image_url}
-                alt="no Img"
-                onClick={() => {
-                  console.log(PostList[content].image_url);
-                }}
-              />
+              <S.PostBoxImg src={PostList[content].image_url} alt="no Img" />
               <S.PostBoxContext>{PostList[content].context} </S.PostBoxContext>
             </S.PostSqare>
           </>

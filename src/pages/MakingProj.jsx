@@ -10,18 +10,17 @@ const MackingClub = (props) => {
   const navigate = useNavigate();
   const [title, setTitle] = useState("");
   const [info, setInfo] = useState("");
-  const [img, setImg] = useState(null);
+  const [url, setUrl] = useState("");
 
-  const PostAxios = (image_url) => {
+  const PostAxios = () => {
     console.log(title);
-    console.log(image_url);
     console.log(info);
 
     BaseAxios.post("/project/post/write", {
       title: title,
       context: info,
       writer: props.user,
-      image_url: image_url,
+      image_url: url,
     }).then((e) => {
       console.log(e);
     });
@@ -35,27 +34,12 @@ const MackingClub = (props) => {
         title + "\n" + info + "\n" + "를 올리시겠습니까?"
       );
       if (Check) {
-        const image_url = img.thumbnail;
-        let url = image_url.slice(5);
-        PostAxios(url);
+        PostAxios();
         navigate("/ProjectBoard");
       }
     }
   };
 
-  const uploadFile = (e) => {
-    const fileList = e.target.files;
-    if (fileList && fileList[0]) {
-      const url = URL.createObjectURL(fileList[0]);
-
-      setImg({
-        file: fileList[0],
-        thumbnail: url,
-        type: fileList[0].type.slice(0, 5),
-      });
-      console.log("d", url);
-    }
-  };
   return (
     <S.BackGroundBox>
       <S.BackGroundImg src={Background} alt="사진" />
@@ -81,19 +65,16 @@ const MackingClub = (props) => {
             value={info}
             onChange={(e) => setInfo(e.target.value)}
           ></S.TextArea>
-          <label htmlFor="imgs">
-            <S.InputFile>이미지 업로드</S.InputFile>
-          </label>
           <S.InputFileNone
-            type="file"
-            id="imgs"
-            accept="image/*"
-            onChange={uploadFile}
+            type="text"
+            value={url}
+            placeholder="이미지 URL을 넣어주세요"
+            onChange={(e) => setUrl(e.target.value)}
           />
         </S.InfoNav>
         <S.UploadBtn
           onClick={() => {
-            console.log(title, info, img);
+            console.log(title, info, url);
             CheckUpload();
           }}
         >

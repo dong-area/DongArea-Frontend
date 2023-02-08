@@ -141,7 +141,6 @@ export const PostBoxImg = styled.img`
   width: 25.813rem;
   height: 14.313rem;
   object-fit: contain;
-
   margin-top: 2rem;
   margin-bottom: 1.5rem;
   color: #ffffff;
