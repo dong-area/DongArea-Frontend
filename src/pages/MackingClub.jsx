@@ -2,8 +2,11 @@ import React, { useRef, useState, useMemo } from "react";
 import * as S from "../style/MackingClubStyle";
 import Background from "../asset/dongarea.png";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
+//개설 글쓰기
 const MackingClub = () => {
+  const navigate = useNavigate()
   const [title, setTitle] = useState("");
   const [info, setInfo] = useState("");
   const [img, setImg] = useState(null);
@@ -27,6 +30,7 @@ const MackingClub = () => {
       );
       if (Check) {
         PostAxios(image_url);
+        navigate('/MakingClubBoard')
       }
     }
   };
