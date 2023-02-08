@@ -3,9 +3,11 @@ import { useNavigate } from "react-router-dom";
 import * as S from "../style/HeaderStyle";
 import NotiOn from "../asset/NotiOn.png";
 import NotiOff from "../asset/NotiOff.png";
+import Modal from "./Modal";
 
 const Header = (props) => {
   const [isSignInUp, setIsSignInUp] = useState(false);
+  const [isActive, setIsActive] = useState(false);
   const Navigate = useNavigate();
   useEffect(() => {
     if (
