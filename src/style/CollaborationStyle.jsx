@@ -88,7 +88,7 @@ export const MonitorInsideNavBar = styled.nav`
   justify-content: space-between;
 `;
 
-export const MonitorInsideNav = styled.nav`
+export const MonitorInsideNav = styled.img`
   height: 14rem;
   width: 24.5rem;
   background-color: green;

@@ -1,5 +1,11 @@
 import * as S from "../style/CollaborationStyle";
 import M from "../asset/Mo.png";
+import Cns from "../asset/cns.png";
+import Md from "../asset/md.png";
+import Unite from "../asset/unite.png";
+import B1nd from "../asset/DODAMhome.png";
+import Shoulder from "../asset/shoulderhome.png";
+import SchoolMeal from "../asset/SchoolMealhome.png";
 
 const Collaboration = () => {
   return (
@@ -18,14 +24,14 @@ const Collaboration = () => {
       </S.WholeTitle>
       <S.Monitor src={M}></S.Monitor>
       <S.MonitorInsideNavBar top={7.5}>
-        <S.MonitorInsideNav></S.MonitorInsideNav>
-        <S.MonitorInsideNav></S.MonitorInsideNav>
-        <S.MonitorInsideNav></S.MonitorInsideNav>
+        <S.MonitorInsideNav src={Cns}></S.MonitorInsideNav>
+        <S.MonitorInsideNav src={Md}></S.MonitorInsideNav>
+        <S.MonitorInsideNav src={Unite}></S.MonitorInsideNav>
       </S.MonitorInsideNavBar>
       <S.MonitorInsideNavBar top={70}>
-        <S.MonitorInsideNav></S.MonitorInsideNav>
-        <S.MonitorInsideNav></S.MonitorInsideNav>
-        <S.MonitorInsideNav></S.MonitorInsideNav>
+        <S.MonitorInsideNav src={B1nd}></S.MonitorInsideNav>
+        <S.MonitorInsideNav src={Shoulder}></S.MonitorInsideNav>
+        <S.MonitorInsideNav src={SchoolMeal}></S.MonitorInsideNav>
       </S.MonitorInsideNavBar>
     </>
   );

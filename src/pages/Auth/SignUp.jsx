@@ -73,7 +73,7 @@ const SignUp = (props) => {
               <S.InputSpan>이름</S.InputSpan>
               <S.InputTag
                 className="name"
-                placeholder="최대 20자 이내로 입력해주세요(영어)"
+                placeholder="최대 20자 이내로 입력해주세요"
                 value={Name}
                 onChange={(e) => setName(e.target.value)}
               />
