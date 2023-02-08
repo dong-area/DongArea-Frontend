@@ -121,3 +121,22 @@ export const SideBar = styled.div`
   background-color: #e7a809;
   right: 0px;
 `;
+
+export const ModalBackground = styled.div`
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+`;
+
+export const ModalMainBox = styled.nav`
+  position: fixed;
+  width: 36.625rem;
+  height: 36.625rem;
+  padding: 4rem;
+  margin: 10rem 34%;
+  background-color: #585757;
+  border-radius: 0.5rem;
+  z-index: 1;
+`;

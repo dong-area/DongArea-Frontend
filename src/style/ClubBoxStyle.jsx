@@ -11,6 +11,7 @@ export const MainBox = styled.div`
   transition: 0.3s;
   &:hover {
     transform: translateY(-0.4rem);
+    box-shadow: 0rem 1rem 2rem #e7aa4a90;
   }
 `;
 

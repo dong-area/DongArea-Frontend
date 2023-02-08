@@ -10,7 +10,8 @@ import MackingClub from "./pages/MackingClub";
 import Collaboration from "./pages/Collaboration";
 import ProjectBoard from "./pages/ProjectBoard";
 import ScrollToTop from "./utils/ScrollToTop";
-
+import MyClub from "./pages/MyClub";
+import MakingProj from "./pages/MakingProj";
 const Router = () => {
   const [isToken, setIsToken] = useState(true);
   const [token, setToken] = useState("dd");
@@ -45,10 +46,12 @@ const Router = () => {
           path="/SignUp"
           element={<SignUp setIsToken={setIsToken} />}
         ></Route>
-        <Route path="/create" element={<MackingClub />}></Route>
+        <Route path="/createclub" element={<MackingClub />}></Route>
+        <Route path="/createproj" element={<MakingProj />}></Route>
         <Route path="/MakingClubBoard" element={<MakingClubBoard />}></Route>
         <Route path="/Collaboration" element={<Collaboration />}></Route>
         <Route path="/ProjectBoard" element={<ProjectBoard />}></Route>
+        <Route path="/myclub" element={<MyClub />}></Route>
       </Routes>
     </BrowserRouter>
   );
