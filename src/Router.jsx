@@ -10,6 +10,7 @@ import MackingClub from "./pages/MackingClub";
 import Collaboration from "./pages/Collaboration";
 import ProjectBoard from "./pages/ProjectBoard";
 import ScrollToTop from "./utils/ScrollToTop";
+import MyClub from "./pages/MyClub";
 
 const Router = () => {
   const [isToken, setIsToken] = useState(true);
@@ -49,6 +50,7 @@ const Router = () => {
         <Route path="/MakingClubBoard" element={<MakingClubBoard />}></Route>
         <Route path="/Collaboration" element={<Collaboration />}></Route>
         <Route path="/ProjectBoard" element={<ProjectBoard />}></Route>
+        <Route path="/myclub" element={<MyClub />}></Route>
       </Routes>
     </BrowserRouter>
   );

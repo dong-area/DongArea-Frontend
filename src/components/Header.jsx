@@ -53,7 +53,10 @@ const Header = (props) => {
           </S.ContentTitleSpan>
           {props.isToken ? (
             <>
-              <S.ContentTitleSpan color={`#e7aa4a`}>
+              <S.ContentTitleSpan
+                color={`#e7aa4a`}
+                onClick={() => Navigate("/myclub")}
+              >
                 내 동아리
               </S.ContentTitleSpan>
               <S.ContentTitleSpan
