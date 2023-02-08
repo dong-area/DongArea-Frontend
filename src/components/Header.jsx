@@ -18,6 +18,14 @@ const Header = (props) => {
       setIsSignInUp(true);
     else setIsSignInUp(false);
   });
+
+  useEffect(() => {
+    if (localStorage.getItem("token") != null) {
+      props.setToken(localStorage.getItem("token"));
+      props.setIsToken(true);
+    }
+  }, []);
+
   return (
     <S.Header>
       <S.ContentSpan onClick={() => Navigate("/")}>D.A</S.ContentSpan>

@@ -62,8 +62,14 @@ const Board = () => {
               <S.PostBoxTitle> {PostList[content].title} </S.PostBoxTitle>
               <S.PostBoxWriter>{PostList[content].writer}</S.PostBoxWriter>
               <S.PostBoxHr />
-              <S.PostBoxImg src={PostList[content].image_url} alt="No Image" />
-              <S.PostBoxContext>{PostList[content].context}</S.PostBoxContext>
+              <S.PostBoxImg
+                src={PostList[content].image_url}
+                alt="no Img"
+                onClick={() => {
+                  console.log(PostList[content].image_url);
+                }}
+              />
+              <S.PostBoxContext>{PostList[content].context} </S.PostBoxContext>
             </S.PostSqare>
           </>
         )}

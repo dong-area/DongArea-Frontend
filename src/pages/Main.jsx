@@ -83,21 +83,6 @@ const Main = (props) => {
   const [freeArr, setFreeArr] = useState([]);
 
   useEffect(() => {
-    if (localStorage.getItem("token") != null) {
-      axios
-        .post("", {
-          header: { Authorization: `${props.Token}` },
-        })
-        .then((e) => {
-          console.log("suc", e);
-          props.setUser(e);
-        })
-        .catch((e) => {
-          console.log("error", e);
-        });
-      props.setToken(localStorage.getItem("token"));
-      props.setIsToken(true);
-    }
     let arr1 = [];
     arr1.push(ClubData.filter((e) => e.isFree == false));
     setCreateArr(arr1[0]);

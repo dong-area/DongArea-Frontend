@@ -94,17 +94,17 @@ export const PostSqare = styled.div`
   width: 40rem;
   height: 51rem;
   background-color: #171717;
-  border: 5px solid #E7AA4A;
+  border: 5px solid #e7aa4a;
   border-radius: 10px;
 
   position: fixed;
   left: 80rem;
-  top : 10rem;
+  top: 10rem;
 
   display: flex;
   align-items: center;
   flex-direction: column;
-`
+`;
 
 export const ShadowSqare = styled.div`
   width: 30.938rem;
@@ -114,28 +114,28 @@ export const ShadowSqare = styled.div`
   position: fixed;
   left: 77rem;
   top: 33rem;
-`
+`;
 
 export const PostBoxTitle = styled.div`
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 1.875rem;
   font-weight: 600;
   margin-top: 3.75rem;
-`
+`;
 
 export const PostBoxWriter = styled.div`
   font-size: 1rem;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-top: 0.5rem;
-`
+`;
 
 export const PostBoxHr = styled.div`
   width: 25.813rem;
   height: 0.1rem;
-  background-color: #E7AA4A;
+  background-color: #e7aa4a;
   margin-top: 1.1rem;
-  box-shadow: 0px 4px 4px #FFFFFF;
-`
+  box-shadow: 0px 4px 4px #ffffff;
+`;
 
 export const PostBoxImg = styled.img`
   width: 25.813rem;
@@ -144,11 +144,11 @@ export const PostBoxImg = styled.img`
 
   margin-top: 2rem;
   margin-bottom: 1.5rem;
-  color: #FFFFFF;
-`
+  color: #ffffff;
+`;
 
 export const PostBoxContext = styled.div`
   font-size: 1.25rem;
-  color: #FFFFFF;
+  color: #ffffff;
   width: 25.813rem;
-`
+`;
