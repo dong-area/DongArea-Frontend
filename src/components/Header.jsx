@@ -73,6 +73,7 @@ const Header = (props) => {
                   props.setToken("");
                   props.setIsToken("");
                   props.setUser(null);
+                  localStorage.removeItem("token");
                 }}
               >
                 로그아웃

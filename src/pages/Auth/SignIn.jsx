@@ -16,16 +16,16 @@ const SignIn = (props) => {
   };
   const onSubmit = (e) => {
     e.preventDefault();
-    BaseAxios
-      .post("/login", {
-        id: Id,
-        password: Pw,
-      })
+    BaseAxios.post("/login", {
+      id: Id,
+      password: Pw,
+    })
       .then((res) => {
         //token
         alert("로그인 성공");
         props.setToken(res.headers.authorization);
         props.setIsToken(true);
+        localStorage.setItem("token", res.headers.authorization);
         GoHome();
       })
       .catch((error) => {

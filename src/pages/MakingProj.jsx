@@ -11,11 +11,11 @@ const MakingProj = () => {
   const [img, setImg] = useState(null);
   const Navigate = useNavigate();
 
-  const PostAxios = (image_url) => {
+  const PostAxios = (url) => {
     axios.post("/project/post/write", {
       title: title,
       context: info,
-      image_url: image_url.silce(5),
+      image_url: url,
     });
   };
 
@@ -24,12 +24,12 @@ const MakingProj = () => {
       alert("정보를 정확하세 입력해주세요");
     } else {
       const image_url = img.thumbnail;
-      console.log(image_url.slice(5));
+      let url = image_url.slice(5);
       let Check = window.confirm(
         title + "\n" + info + "\n" + "를 올리시겠습니까?"
       );
       if (Check) {
-        PostAxios(image_url);
+        PostAxios(url);
         Navigate("/ProjectBoard");
       }
     }

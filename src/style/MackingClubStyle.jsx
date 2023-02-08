@@ -74,6 +74,7 @@ export const InputTag = styled.input`
   margin: 1rem 0rem 0rem 1rem;
   padding: 1rem;
   width: 14rem;
+  color: white;
 `;
 
 export const InputNav = styled.span`

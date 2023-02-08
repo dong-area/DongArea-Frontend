@@ -13,7 +13,7 @@ import ScrollToTop from "./utils/ScrollToTop";
 import MyClub from "./pages/MyClub";
 import MakingProj from "./pages/MakingProj";
 const Router = () => {
-  const [isToken, setIsToken] = useState(true);
+  const [isToken, setIsToken] = useState(false);
   const [token, setToken] = useState("");
   const [user, setUser] = useState(null);
   return (
@@ -34,14 +34,22 @@ const Router = () => {
               token={token}
               user={user}
               setUser={setUser}
+              setToken={setToken}
+              setIsToken={setIsToken}
             />
           }
         ></Route>
-        <Route path="/myinfo" element={<MyInfo 
-        token={token} 
-        setIsToken={setIsToken}
-        setToken={setToken}
-        setUser={setUser}/>}></Route>
+        <Route
+          path="/myinfo"
+          element={
+            <MyInfo
+              token={token}
+              setIsToken={setIsToken}
+              setToken={setToken}
+              setUser={setUser}
+            />
+          }
+        ></Route>
         <Route
           path="/SignIn"
           element={<SignIn setIsToken={setIsToken} setToken={setToken} />}
