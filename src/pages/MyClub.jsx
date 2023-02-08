@@ -38,37 +38,21 @@ const MyClub = () => {
           </S.TitleText>
         </S.TitleWrap>
         <S.BottomBox>
-          <S.ContextBox
-            width="26rem"
-            height="14rem"
-            margin="12rem 0rem 0rem 16%"
-          >
+          <S.ContextBox width="26%" height="14rem" margin="12rem 0rem 0rem 16%">
             <S.ContextTitle>내 동아리명은 무엇인가?</S.ContextTitle>
             <S.ContextContent>CNS</S.ContextContent>
           </S.ContextBox>
-          <S.ContextBox
-            width="30rem"
-            height="14rem"
-            margin="30rem 0rem 0rem 60%"
-          >
+          <S.ContextBox width="30%" height="14rem" margin="30rem 0rem 0rem 60%">
             <S.ContextTitle>내 동아리명 뜻은 무엇인가?</S.ContextTitle>
             <S.ContextContent>
               Care aNd Service 로 사용자의 “관리와 서비스”를 뜻한다.
             </S.ContextContent>
           </S.ContextBox>
-          <S.ContextBox
-            width="28rem"
-            height="16rem"
-            margin="50rem 0rem 0rem 20%"
-          >
+          <S.ContextBox width="28%" height="16rem" margin="50rem 0rem 0rem 20%">
             <S.ContextTitle>내 동아리 로고는 무엇인가?</S.ContextTitle>
-            <S.ContextLogo src={logo} alt="logo" />
+            <S.ContextLogo src={logo} alt="logor" />
           </S.ContextBox>
-          <S.ContextBox
-            width="30rem"
-            height="16rem"
-            margin="80rem 0rem 0rem 55%"
-          >
+          <S.ContextBox width="30%" height="16rem" margin="80rem 0rem 0rem 55%">
             <S.ContextTitle>내 동아리는 어떤 동아리인가?</S.ContextTitle>
             <S.ContextContent>
               CNS는 우리 학교의 신입생 원서 접수 사이트 “IDA”를 제공하고 동아리
@@ -76,7 +60,7 @@ const MyClub = () => {
             </S.ContextContent>
           </S.ContextBox>
           <S.ContextBox
-            width="30rem"
+            width="30%"
             height="16rem"
             margin="110rem 0rem 0rem 10%"
           >
@@ -86,7 +70,7 @@ const MyClub = () => {
             </S.ContextContent>
           </S.ContextBox>
           <S.ContextBox
-            width="30rem"
+            width="30%"
             height="20rem"
             margin="135rem 0rem 0rem 50%"
           >
