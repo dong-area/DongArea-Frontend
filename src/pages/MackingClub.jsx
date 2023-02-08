@@ -3,6 +3,7 @@ import * as S from "../style/MackingClubStyle";
 import Background from "../asset/dongarea.png";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import BaseAxios from "../utils/BaseAxios";
 
 //개설 글쓰기
 const MackingClub = () => {
@@ -11,17 +12,17 @@ const MackingClub = () => {
   const [info, setInfo] = useState("");
   const [img, setImg] = useState(null);
 
-  const PostAxios = (image_url) => {
-    axios.post("/club/post/write", {
+  const PostAxios = (url) => {
+    BaseAxios.post("/club/post/write", {
       title: title,
       context: info,
-      image_url: image_url.silce(5),
+      image_url: url,
     });
   };
 
   const CheckUpload = () => {
     const image_url = img.thumbnail;
-    console.log(image_url.slice(5));
+    let url = image_url.slice(5);
     if (title == "" || info == "" || img == null) {
       alert("정보를 정확하세 입력해주세요");
     } else {
@@ -29,7 +30,7 @@ const MackingClub = () => {
         title + "\n" + info + "\n" + "를 올리시겠습니까?"
       );
       if (Check) {
-        PostAxios(image_url);
+        PostAxios(url);
         navigate('/MakingClubBoard')
       }
     }
