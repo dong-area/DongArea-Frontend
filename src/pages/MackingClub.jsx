@@ -36,7 +36,7 @@ const MackingClub = (props) => {
       );
       if (Check) {
         PostAxios(url);
-        navigate("/MakingClubBoard");
+        navigate("/");
       }
     }
   };

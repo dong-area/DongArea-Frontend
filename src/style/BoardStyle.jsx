@@ -98,7 +98,7 @@ export const PostSqare = styled.div`
   border-radius: 10px;
 
   position: fixed;
-  left: 80rem;
+  left: 65rem;
   top: 10rem;
 
   display: flex;
@@ -150,4 +150,15 @@ export const PostBoxContext = styled.div`
   font-size: 1.25rem;
   color: #ffffff;
   width: 25.813rem;
+`;
+
+export const DelBtn = styled.button`
+  position: absolute;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #e7aa4a;
+  border: 0.25rem solid #e7aa4a;
+  bottom: 0;
+  margin-bottom: 4rem;
 `;

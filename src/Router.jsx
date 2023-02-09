@@ -60,10 +60,16 @@ const Router = () => {
         ></Route>
         <Route path="/createclub" element={<MackingClub user={user} />}></Route>
         <Route path="/createproj" element={<MakingProj user={user} />}></Route>
-        <Route path="/MakingClubBoard" element={<MakingClubBoard />}></Route>
         <Route path="/Collaboration" element={<Collaboration />}></Route>
-        <Route path="/ProjectBoard" element={<ProjectBoard />}></Route>
-        <Route path="/myclub" element={<MyClub token={token}/>}></Route>
+        <Route
+          path="/MakingClubBoard"
+          element={<MakingClubBoard user={user} />}
+        ></Route>
+        <Route
+          path="/ProjectBoard"
+          element={<ProjectBoard user={user} />}
+        ></Route>
+        <Route path="/myclub" element={<MyClub token={token} />}></Route>
       </Routes>
     </BrowserRouter>
   );

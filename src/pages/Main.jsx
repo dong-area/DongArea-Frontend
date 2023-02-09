@@ -29,7 +29,7 @@ const Main = (props) => {
       title: "모디",
       titleDetail: "Mobile Develper",
       context:
-        "안녕하세요. 저희는 모바일 앱 위주로 개발하는 모바일 디벨로퍼(모디)입니다.",
+        "안녕하세요. 저희는 안드로이드 및 IOS 앱을 위주로 개발하는 동아리, 모바일 디벨로퍼(모디)입니다.",
       poster: Md,
       isFree: false,
     },

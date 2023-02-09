@@ -7,7 +7,7 @@ import axios from "axios";
 import BaseAxios from "../utils/BaseAxios";
 
 //프로젝트 게시판
-const Board = () => {
+const Board = (props) => {
   const navigate = useNavigate();
   const [PostList, setPostList] = useState([]);
   const [content, setContent] = useState(-1);
@@ -30,7 +30,19 @@ const Board = () => {
   const LookPost = (idx) => {
     setContent(idx);
   };
-
+  const DeletePage = (idx) => {
+    let real = window.confirm("삭제하시겠습니까?");
+    if (real) {
+      console.log(PostList);
+      console.log(idx, props.user);
+      BaseAxios.get(`club/post/delete?idx=${idx}&username=${props.user}`)
+        .then((e) => {
+          console.log(e);
+        })
+        .catch((e) => console.log(e));
+      navigate("/");
+    }
+  };
   return (
     <>
       <S.Body />
@@ -65,6 +77,9 @@ const Board = () => {
               <S.PostBoxHr />
               <S.PostBoxImg src={PostList[content].image_url} alt="no Img" />
               <S.PostBoxContext>{PostList[content].context}</S.PostBoxContext>
+              <S.DelBtn onClick={() => DeletePage(PostList[content].idx)}>
+                삭제
+              </S.DelBtn>
             </S.PostSqare>
           </>
         )}

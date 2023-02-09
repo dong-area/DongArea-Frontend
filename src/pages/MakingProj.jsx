@@ -35,7 +35,7 @@ const MackingClub = (props) => {
       );
       if (Check) {
         PostAxios();
-        navigate("/ProjectBoard");
+        navigate("/");
       }
     }
   };
