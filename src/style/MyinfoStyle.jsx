@@ -18,7 +18,21 @@ export const ProfileBox = styled.div`
     border-radius: 20px;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
+`
+
+export const Box = styled.div`
+    display: flex;
+    align-items: center;
+`
+
+export const Title = styled.div`
+    color: #FFFFFF;
+    font-size: 1.25rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
 `
 
 export const WholeText = styled.div`
@@ -37,7 +51,6 @@ export const Text = styled.div`
 `
 
 export const ProfileImg = styled.img`
-    margin-left: 8rem;
 `
 
 export const ProfileLabel = styled.label`
@@ -74,6 +87,6 @@ export const RightImg = styled.img`
 
 export const Logout = styled.img`
     position: relative;
-    top:10rem;
-
+    left: 20rem;
+    top: 5rem;
 `

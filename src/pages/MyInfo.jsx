@@ -34,6 +34,9 @@ const MyInfo = (props) => {
       </S.LogoWholeDiv>
       
       <S.ProfileBox>
+        <S.Title>내 정보</S.Title>
+        <S.Box>
+
         <S.ProfileImg src={mypageProfile}></S.ProfileImg>
         <S.WholeText>
           <S.Text>
@@ -49,6 +52,9 @@ const MyInfo = (props) => {
             <S.ProfileText>{Info.clubname}</S.ProfileText>
           </S.Text>
         </S.WholeText>
+        
+        </S.Box>
+
 
         <S.Logout src={LogoutImg} onClick={()=>{
           props.setToken("");
